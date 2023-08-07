@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Creamy Mushroom Soup</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Playfair+Display:wght@700&family=Montserrat:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Montserrat", sans-serif;
+        font-size: 18px;
+        color: #211c1c;
+      }
+
+      ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+
+      nav {
+        background-color: rgb(242, 230, 209, 0.6);
+        padding: 10px 80px 10px 30px;
+        transition: 0.2s ease-in-out;
+      }
+
+      nav li {
+        display: inline-block;
+        margin-left: 30px;
+        font-size: 18px;
+        text-transform: uppercase;
+      }
+
+      nav li a {
+        text-decoration: none;
+        color: #211c1c;
+      }
+
+      a.hover-link {
+        transition: color 0.5s ease-in-out;
+        position: relative;
+      }
+
+      a.hover-link:hover {
+        color: #83522d;
+      }
+
+      a.hover-link:after {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        height: 2px;
+        width: 100%;
+        background-color: transparent;
+        transform-origin: left top;
+        transform: scaleX(0);
+        transition: color 0.5s, transform 0.2s ease-in-out;
+      }
+
+      a.hover-link:hover:after {
+        transform: scaleX(1);
+        background-color: #211c1c;
+      }
+
+      .logo {
+        height: 70px;
+      }
+
+      .nav-active {
+        background-color: #fff;
+        box-shadow: 5px -1px 12px -5px grey;
+      }
+
+      .hero {
+        background-image: url(images/mushroom-soup-and-white-copy-space.jpg);
+        background-size: cover;
+        background-position-x: center;
+        overflow: auto;
+      }
+
+      .hero-content {
+        background-color: rgb(101, 95, 42, 0.5);
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+          rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+          rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        width: 750px;
+        margin: 180px auto;
+        padding-bottom: 50px;
+        border: 1px solid #83522d;
+      }
+
+      .hero-content h1 {
+        font-family: "Playfair Display", sans-serif;
+        font-size: 56px;
+        line-height: 1.2;
+        color: #fff;
+        margin-top: 20px;
+      }
+
+      .hero-content p {
+        font-family: "Dancing Script", cursive;
+        font-size: 34px;
+        width: 600px;
+        color: white;
+        margin: 20px auto 50px;
+        padding: 8px 0;
+        border-top: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+      }
+
+      .hero-content a {
+        text-decoration: none;
+        border-radius: 4px;
+        font-size: 18px;
+        transition: all 0.3s ease-in;
+      }
+
+      .hero-content .learn-button {
+        background-color: #fff;
+        padding: 18px 34px;
+        color: #211c1c;
+      }
+
+      .hero-content .learn-button:hover {
+        color: #fff;
+        background-color: transparent;
+        box-shadow: 0 0 0 2px #fff;
+      }
+
+      .hero-content .view-button {
+        background-color: transparent;
+        padding: 16px 20px;
+        border: 2px solid white;
+        color: white;
+      }
+
+      .hero-content .view-button:hover {
+        color: #211c1c;
+        background-color: #fff;
+      }
+
+      .about-origin {
+        padding: 60px 250px;
+      }
+
+      .about-origin h2 {
+        font-family: "Playfair Display", sans-serif;
+        font-size: 44px;
+      }
+
+      .about-origin p {
+        font-size: 20px;
+        padding-bottom: 30px;
+        text-align: justify;
+      }
+
+      .about-ingredients {
+        background-image: url(images/mushroom-soup-in-a-bowl.png),
+          url(images/blue-line.png), url(images/blue-line-2.png),
+          url(images/blue-line-3.png), url(images/blue-line-4.png);
+        background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+        background-position-x: center, 250px, 670px, 250px, 710px;
+        background-position-y: 70px, 350px, 516px, 10px, 0;
+        margin-bottom: 110px;
+      }
+
+      .about-ingredients h2 {
+        font-size: 40px;
+        padding: 0 30px;
+      }
+
+      .about-ingredients .mushrooms-img {
+        width: 300px;
+        margin-left: 100px;
+      }
+
+      .about-ingredients .herbs-img {
+        width: 290px;
+        margin-left: 260px;
+      }
+
+      .about-ingredients .flour-img {
+        width: 300px;
+        margin-top: 100px;
+        margin-left: 220px;
+      }
+
+      .about-ingredients .cream-img {
+        width: 200px;
+        height: 350px;
+        margin-left: 230px;
+      }
+
+      .about-ingredients button {
+        background-color: transparent;
+        padding: 16px 20px;
+        border: 2px solid #9cacbb;
+      }
+
+      .about-ingredients button:hover {
+        background-color: #9cacbb;
+      }
+
+      .about-ingredients .mushrooms-btn {
+        margin-top: -20px;
+        margin-left: 180px;
+      }
+
+      .about-ingredients .herbs-btn {
+        margin-left: 360px;
+      }
+
+      .about-ingredients .flour-btn {
+        margin-left: 350px;
+      }
+
+      .about-ingredients .cream-btn {
+        margin-left: 274px;
+        margin-top: 50px;
+      }
+
+      .flavor-wrapper {
+        gap: 100px;
+      }
+
+      .flavor-wrapper h3,
+      .stock {
+        border-top: 1px solid #211c1c;
+        border-bottom: 1px solid #211c1c;
+        padding: 10px 0;
+      }
+
+      .flavor-wrapper p {
+        width: 220px;
+        text-align: justify;
+        font-size: 18px;
+      }
+
+      .garlic-img {
+        width: 220px;
+        height: 220px;
+      }
+
+      .onions-img {
+        width: 220px;
+        height: 220px;
+      }
+
+      .wine-img {
+        width: 310px;
+        height: 220px;
+      }
+
+      .flavor-wrapper .wine-paragraph {
+        width: 310px;
+      }
+
+      .flavor-wrapper .onions-paragraph {
+        width: 260px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid p-0">
+      <header id="home">
+        <nav
+          class="d-flex justify-content-between align-items-center fixed-top"
+        >
+          <div>
+            <a href="#home">
+              <img
+                src="images/mushroom-logo-transparent.png"
+                alt="Flavorful food logo"
+                class="logo"
+            /></a>
+          </div>
+          <div>
+            <ul>
+              <li><a class="hover-link" href="#home">Home</a></li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link hover-link"
+                  data-bs-toggle="dropdown"
+                  href="#"
+                  role="button"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  >About <span class="dropdown-toggle"></span
+                ></a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#origin">Origin</a>
+                  <a class="dropdown-item" href="#ingredients"
+                    >Main Ingredients</a
+                  >
+                  <a class="dropdown-item" href="#flavors"
+                    >Additional flavors</a
+                  >
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">About me</a>
+                </div>
+              </li>
+              <li>
+                <a
+                  class="nav-link hover-link"
+                  data-bs-toggle="dropdown"
+                  href="#"
+                  role="button"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  >Recipes <span class="dropdown-toggle"></span
+                ></a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Recipe</a>
+                  <a class="dropdown-item" href="#">Recipes</a>
+                </div>
+              </li>
+              <li><a class="hover-link" href="#">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <section class="hero">
+        <div class="hero-content">
+          <h1 class="text-center">
+            Cream of <br />
+            Mushroom soup
+          </h1>
+          <p class="text-center">
+            So deliciously creamy <br />
+            with tender bites of mushroom pieces
+          </p>
+          <div class="d-flex gap-5 justify-content-center">
+            <a href="#ingredients" class="learn-button">Learn more</a>
+            <a href="#" class="view-button">Jump to recipe</a>
+          </div>
+        </div>
+      </section>
+      <section id="origin" class="mb-5 about-origin">
+        <h2 class="m-5 text-center lh-base">
+          The Origin Of <br />
+          Cream Of Mushroom Soup
+        </h2>
+        <p>
+          It is believed Mushroom Soup had quite humble beginnings dating back
+          to quite a few hundred years ago. Originating in France in the form of
+          a Bechamel sauce or in Tuscany, Italy as Salsa colla, this is a creamy
+          white sauce, made using white roux and milk. Often referred to as
+          “glue sauce” due to its binding nature in dishes like pasta, lasagne
+          etc.
+        </p>
+        <p>
+          The earliest record of Bechamel sauce recipe was in 1533 in France.
+          However, it is believed it originated much earlier than this. Overtime
+          the simple sauce recipe developed and changed creating the classic
+          Mushroom Soup that so many of us know and love.
+        </p>
+        <p>
+          Cream of Mushroom Soup has been referred to as “America’s Bechamel”
+          due to its commercialisation and introduction to the American market
+          by the American company Campbells Soup. Mushroom Soup is commonly used
+          in many recipes including beef stroganoff and various casseroles, and
+          the humble Mushroom Soup became a staple in many homes across North
+          America and Australia from the early 20th century.
+        </p>
+      </section>
+      <section id="ingredients" class="about-ingredients">
+        <h2 class="text-center">
+          What are the main ingredients needed for cooking?
+        </h2>
+        <div class="row">
+          <div class="col-6">
+            <img
+              src="/images/mushrooms.png"
+              alt="Mushrooms"
+              class="img-fluid mushrooms-img"
+            />
+            <button
+              type="button"
+              class="btn d-block mushrooms-btn"
+              data-bs-toggle="popover"
+              data-bs-trigger="focus"
+              data-bs-title="Mushrooms"
+              data-bs-content="Fresh brown or cremini mushrooms are perfect for this recipe. You could also use mini portobello mushrooms, or a combination of your favourite mushroom varieties."
+            >
+              Mushrooms
+            </button>
+          </div>
+          <div class="col-6">
+            <img
+              src="/images/herbs.png"
+              alt="Herbs"
+              class="img-fluid herbs-img"
+            />
+            <button
+              type="button"
+              class="btn d-block herbs-btn"
+              data-bs-toggle="popover"
+              data-bs-trigger="focus"
+              data-bs-title="Herbs"
+              data-bs-content="The best herbs to compliment those incredible flavors is a combination of thyme and parsley. Of course, if you don’t like those, you can also use rosemary, oregano, tarragon, chives or cilantro. Use what you love!"
+            >
+              Herbs
+            </button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <img
+              src="/images/flour.png"
+              alt="Flour"
+              class="img-fluid flour-img"
+            />
+            <button
+              type="button"
+              class="btn d-block flour-btn"
+              data-bs-toggle="popover"
+              data-bs-trigger="focus"
+              data-bs-title="Flour"
+              data-bs-content="We need flour to create that delicious, creamy texture mushroom soup is loved for. You can leave it out and use 2-3 tablespoons cornstarch mixed with 1/4 cup water (slurry) if you wish. If unsure about quantities for your liking, add the cornstarch slurry in tablespoon increments, stirring in between, until you’ve achieved your ideal texture."
+            >
+              Flour
+            </button>
+          </div>
+          <div class="col-6">
+            <img
+              src="/images/cream.png"
+              alt="Cream"
+              class="img-fluid cream-img"
+            />
+            <button
+              type="button"
+              class="btn d-block cream-btn"
+              data-bs-toggle="popover"
+              data-bs-trigger="focus"
+              data-bs-title="Cream"
+              data-bs-content="Half and half, heavy cream, light cream or thickened cream all yield similar results, however heavy cream adds richness."
+            >
+              Cream
+            </button>
+          </div>
+        </div>
+      </section>
+      <section id="flavors" class="about-flavors">
+        <h2 class="text-center mt-5 mb-5">
+          What additional flavors make the soup so delicious?
+        </h2>
+        <div class="d-flex justify-content-center flavor-wrapper">
+          <div>
+            <img
+              src="images/garlic.png"
+              alt="Garlic"
+              class="img-fluid garlic-img"
+            />
+            <h3 class="text-center mt-4">Garlic</h3>
+            <p>
+              Fresh garlic is best, but you can use minced if that’s all you
+              have on hand.
+            </p>
+          </div>
+          <div>
+            <img
+              src="/images/onions.png"
+              alt="Onions"
+              class="img-fluid onions-img"
+            />
+            <h3 class="text-center mt-4">Onions</h3>
+            <p class="onions-paragraph">
+              Don’t be put off by the amount of onions used in the recipe. With
+              the amount of mushrooms in this recipe, you’ll find using 2 onions
+              creates the perfect balance of flavor needed for this mushroom
+              soup recipe.
+            </p>
+          </div>
+          <div>
+            <img src="images/wine.png" alt="Wine" class="img-fluid wine-img" />
+            <h3 class="text-center mt-4">Wine</h3>
+            <p class="wine-paragraph">
+              Dry red or white wines are perfect in this and add an incredible
+              taste. If you prefer to leave wine out, you’re more than welcome
+              to do so. There’s no need to replace it with extra broth or stock.
+            </p>
+          </div>
+        </div>
+        <h3 class="text-center w-25 mx-auto mt-5 stock">Stock or broth</h3>
+        <p class="w-50 mx-auto text-center">
+          Chicken or beef work well for mushroom soup, just use what you have on
+          hand. For a vegetarian option, use a good quality vegetable stock.
+        </p>
+      </section>
+    </div>
+    <script>
+      const popoverTriggerList = document.querySelectorAll(
+        '[data-bs-toggle="popover"]'
+      );
+      const popoverList = [...popoverTriggerList].map(
+        (popoverTriggerEl) => new bootstrap.Popover(popoverTriggerEl)
+      );
+
+      ScrollReveal({
+        reset: true,
+        distance: "150px",
+        duration: 2000,
+        delay: 200,
+      });
+
+      ScrollReveal().reveal(
+        ".hero-content, .about-origin, .about-ingredients, .about-flavors"
+      );
+
+      let navbar = document.querySelector("nav");
+      window.onscroll = () => {
+        if (window.scrollY > 250) {
+          navbar.classList.add("nav-active");
+        } else {
+          navbar.classList.remove("nav-active");
+        }
+      };
+
+      $(".dropdown-toggle").dropdown();
+    </script>
+  </body>
+</html>
