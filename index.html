@@ -282,6 +282,67 @@
       .about-flavors .wine-description {
         width: 310px;
       }
+
+      .recipe img {
+        border: 6px solid #83522d;
+        border-radius: 50%;
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+        position: relative;
+        z-index: 1;
+      }
+
+      .recipe .recipe-container {
+        padding-top: 160px;
+        position: relative;
+        top: -140px;
+        z-index: 0;
+      }
+
+      .rate {
+        height: 46px;
+        padding: 0 10px;
+      }
+      .rate:not(:checked) > input {
+        position: absolute;
+        clip: rect(0, 0, 0, 0);
+      }
+      .rate:not(:checked) > label {
+        float: right;
+        width: 1em;
+        overflow: hidden;
+        white-space: nowrap;
+        cursor: pointer;
+        font-size: 30px;
+        color: #ccc;
+      }
+      .rate:not(:checked) > label:before {
+        content: "★ ";
+      }
+      .rate > input:checked ~ label {
+        color: #ffc700;
+      }
+      .rate:not(:checked) > label:hover,
+      .rate:not(:checked) > label:hover ~ label {
+        color: #deb217;
+      }
+      .rate > input:checked + label:hover,
+      .rate > input:checked + label:hover ~ label,
+      .rate > input:checked ~ label:hover,
+      .rate > input:checked ~ label:hover ~ label,
+      .rate > label:hover ~ input:checked ~ label {
+        color: #c59b08;
+      }
+
+      .recipe .recipe-container p {
+        font-family: "Dancing Script", cursive;
+        font-size: 22px;
+      }
+      .recipe .recipe-container h3 {
+        font-family: "Playfair Display", sans-serif;
+        font-size: 40px;
+      }
     </style>
   </head>
   <body>
@@ -515,10 +576,31 @@
           hand. For a vegetarian option, use a good quality vegetable stock.
         </p>
       </section>
-      <section>
+      <section id="recipe" class="recipe">
         <h2 class="text-center mt-5 mb-5">
           How to Make Cream of Mushroom Soup
         </h2>
+        <img
+          src="images/top-view-delicious-food-on-table.jpg"
+          alt=""
+          class="img-fluid d-block m-auto"
+        />
+        <div class="w-75 m-auto bg-body-secondary recipe-container">
+          <div class="d-flex justify-content-center flex-row-reverse rate">
+            <input type="radio" id="star5" name="rate" value="5" />
+            <label for="star5" title="5 stars">5 stars</label>
+            <input type="radio" id="star4" name="rate" value="4" />
+            <label for="star4" title="4 stars">4 stars</label>
+            <input type="radio" id="star3" name="rate" value="3" />
+            <label for="star3" title="3 stars">3 stars</label>
+            <input type="radio" id="star2" name="rate" value="2" />
+            <label for="star2" title="2 stars">2 stars</label>
+            <input type="radio" id="star1" name="rate" value="1" />
+            <label for="star1" title="1 star">1 star</label>
+          </div>
+          <p class="text-center">Rate the recipe</p>
+          <h3 class="text-center">Cream of Mushroom Soup</h3>
+        </div>
       </section>
     </div>
     <script>
