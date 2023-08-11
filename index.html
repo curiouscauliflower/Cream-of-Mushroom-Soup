@@ -343,6 +343,21 @@
         font-family: "Playfair Display", sans-serif;
         font-size: 40px;
       }
+
+      .recipe .borders {
+        border-top: 1px dotted #211c1c;
+        border-bottom: 1px dotted #211c1c;
+      }
+
+      .recipe .border-right {
+        border-right: 1px dotted #211c1c;
+        padding-right: 80px;
+      }
+
+      .recipe .border-left {
+        border-left: 1px dotted #211c1c;
+        padding-left: 80px;
+      }
     </style>
   </head>
   <body>
@@ -420,7 +435,7 @@
           </p>
           <div class="d-flex gap-5 justify-content-center">
             <a href="#ingredients" class="learn-button">Learn more</a>
-            <a href="#" class="view-button">Jump to recipe</a>
+            <a href="#recipe" class="view-button">Jump to recipe</a>
           </div>
         </div>
       </section>
@@ -599,7 +614,129 @@
             <label for="star1" title="1 star">1 star</label>
           </div>
           <p class="text-center">Rate the recipe</p>
-          <h3 class="text-center">Cream of Mushroom Soup</h3>
+          <h3 class="text-center mb-4">Cream of Mushroom Soup</h3>
+          <div
+            class="d-flex justify-content-evenly w-75 m-auto text-center borders"
+          >
+            <div class="border-right">
+              <div>PREP:</div>
+              <div>10 MINUTES</div>
+            </div>
+            <div>
+              <div>COOK:</div>
+              <div>30 MINUTES</div>
+            </div>
+            <div class="border-left">
+              <div>TOTAL:</div>
+              <div>40 MINUTES</div>
+            </div>
+          </div>
+          <div class="d-flex mt-4 mb-5 mx-3">
+            <div class="accordion w-100" id="accordionPanelsStayOpenExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseOne"
+                    aria-expanded="true"
+                    aria-controls="panelsStayOpen-collapseOne"
+                  >
+                    INGREDIENTS
+                  </button>
+                </h2>
+                <div
+                  id="panelsStayOpen-collapseOne"
+                  class="accordion-collapse collapse show"
+                >
+                  <div class="accordion-body">
+                    <ul style="list-style: disc" class="ps-3">
+                      <li>4 tablespoons butter</li>
+                      <li>1 tablespoon oil</li>
+                      <li>2 onions diced</li>
+                      <li>4 cloves garlic minced</li>
+                      <li>1 1/2 pounds (750 g) fresh brown mushrooms sliced</li>
+                      <li>4 teaspoons chopped thyme divided</li>
+                      <li>1/2 cup Marsala wine (any dry red or white wine)</li>
+                      <li>6 tablespoons all-purpose flour</li>
+                      <li>4 cups low sodium chicken broth or stock</li>
+                      <li>1-2 teaspoons salt adjust to taste</li>
+                      <li>
+                        1/2-1 teaspoons black cracked pepper adjust to taste
+                      </li>
+                      <li>2 beef bouillon cubes, crumbled</li>
+                      <li>
+                        1 cup heavy cream or half and half (sub with evaporated
+                        milk)
+                      </li>
+                      <li>Chopped fresh parsley and thyme to serve</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion w-100" id="accordionPanelsStayOpenExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="panelsStayOpen-collapseTwo"
+                  >
+                    INSTRUCTIONS
+                  </button>
+                </h2>
+                <div
+                  id="panelsStayOpen-collapseTwo"
+                  class="accordion-collapse collapse"
+                >
+                  <div class="accordion-body">
+                    <ol class="ps-3">
+                      <li>
+                        Heat butter and oil in a large pot over medium-high heat
+                        until melted. Sauté onion for 2 to 3 minutes until
+                        softened. Cook garlic until fragrant, about 1 minute.
+                      </li>
+                      <li>
+                        Add mushrooms and 2 teaspoons thyme, cook for 5 minutes.
+                        Pour in wine and allow to cook for 3 minutes.
+                      </li>
+                      <li>
+                        Sprinkle mushrooms with flour, mix well and cook for 2
+                        minutes. Add stock, mix again and bring to a boil.
+                        Reduce heat to low-medium heat, season with salt, pepper
+                        and crumbled bouillon cubes.
+                      </li>
+                      <li>
+                        Cover and allow to simmer for 10-15 minutes, while
+                        occasionally stirring, until thickened.
+                      </li>
+                      <li>
+                        Reduce heat to low, stir in cream or half and half.
+                        Allow to gently simmer (do not boil). Adjust salt and
+                        pepper to your taste.
+                      </li>
+                      <li>Mix in parsley and remaining thyme. Serve warm.</li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <iframe
+            width="727"
+            height="409"
+            src="https://www.youtube.com/embed/g-PT9hK8wPM"
+            title="Cream of Mushroom Soup"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+            class="d-block m-auto pb-5"
+          ></iframe>
         </div>
       </section>
     </div>
