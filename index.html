@@ -358,6 +358,11 @@
         border-left: 1px dotted #211c1c;
         padding-left: 80px;
       }
+
+      .about-me p {
+        font-size: 20px;
+        text-align: justify;
+      }
     </style>
   </head>
   <body>
@@ -396,7 +401,7 @@
                     >Additional flavors</a
                   >
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">About me</a>
+                  <a class="dropdown-item" href="#about-me">About me</a>
                 </div>
               </li>
               <li>
@@ -600,7 +605,7 @@
           alt=""
           class="img-fluid d-block m-auto"
         />
-        <div class="w-75 m-auto bg-body-secondary recipe-container">
+        <div class="w-75 m-auto bg-body-secondary pb-5 recipe-container">
           <div class="d-flex justify-content-center flex-row-reverse rate">
             <input type="radio" id="star5" name="rate" value="5" />
             <label for="star5" title="5 stars">5 stars</label>
@@ -727,16 +732,125 @@
               </div>
             </div>
           </div>
-          <iframe
-            width="727"
-            height="409"
-            src="https://www.youtube.com/embed/g-PT9hK8wPM"
-            title="Cream of Mushroom Soup"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-            class="d-block m-auto pb-5"
-          ></iframe>
+          <div class="ratio ratio-16x9 w-75 m-auto">
+            <iframe
+              width="727"
+              height="409"
+              src="https://www.youtube.com/embed/g-PT9hK8wPM"
+              title="Cream of Mushroom Soup"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+              class="embed-responsive-item"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+      <section id="recommended" class="mb-5">
+        <h2 class="text-center mb-5">~ other recipes you may like ~</h2>
+        <div class="row justify-content-center">
+          <div class="col-3">
+            <div class="card">
+              <img
+                src="images/vegetarian-stuffed-peppers.jpg"
+                class="card-img-top"
+                alt="Vegeterian stuffed peppers"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Vegeterian stuffed peppers</h5>
+                <p class="card-text">
+                  These easy baked stuffed bell peppers are full of
+                  protein-packed beans and quinoa that will leave you full and
+                  satisfied. So easy to make, flavorful, and the perfect freezer
+                  meal, and great for meal prep.
+                </p>
+                <a
+                  href="https://healthyfitnessmeals.com/vegetarian-stuffed-peppers/"
+                  rel="noreffer noopener nofollow"
+                  target="_blank"
+                  class="btn btn-success"
+                  >Learn more</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="card">
+              <img
+                src="images/cream-of-spinach-soup-vegan-3.jpg"
+                class="card-img-top"
+                alt="..."
+                width="316"
+                height="395"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Cream of Spinach Soup</h5>
+                <p class="card-text">
+                  This fast cream of spinach soup recipe makes it easy to feel
+                  green. Use basic pantry ingredients and fresh or frozen
+                  spinach to make a vegetable-packed soup you can serve hot or
+                  cold.
+                </p>
+                <a
+                  href="https://www.simplyrecipes.com/recipes/cream_of_spinach_soup/"
+                  rel="noreffer noopener nofollow"
+                  target="_blank"
+                  class="btn btn-success"
+                  >Learn more</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="card">
+              <img
+                src="images/creamy-mushroom-pasta-recipe-2.jpg"
+                class="card-img-top"
+                alt="..."
+                width="316"
+                height="395"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Creamy mushroom pasta</h5>
+                <p class="card-text">
+                  This Creamy Mushroom Pasta speaks for itself. A slippery
+                  tangle of pasta bathed in a creamy parmesan sauce loaded with
+                  buttery garlic mushrooms, it’s simple, quick, and utterly
+                  luxurious!
+                </p>
+                <a
+                  href="https://www.recipetineats.com/creamy-mushroom-pasta/"
+                  rel="noreffer noopener nofollow"
+                  target="_blank"
+                  class="btn btn-success"
+                  >Learn more</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="about-me" class="about-me">
+        <div class="row justify-content-center">
+          <div class="col-5">
+            <img
+              src="images/—Pngtree—female chef of dessert making_6939399.png"
+              alt=""
+              class="img-fluid"
+            />
+          </div>
+          <div class="col-5 p-5">
+            <p class="lh-lg">
+              👋 Hello! My name is Hanna and welcome to my makeshift kitchen.
+              Today I want to share one of my all-time favorite soup recipes,
+              <i>Cream of Mushroom Soup</i>. I really like soups with cream,
+              they are not difficult and quick to prepare, and also very tasty,
+              flavorful and hearty. Once, having ordered soup with cream and
+              seafood in a cafe, it was so delicious that I would eat such soup
+              every day. And I like to eat well. That's why this dish holds a
+              special place in my heart. Be sure to try it yourself, if you
+              haven't tried this delicacy yet! 😋
+            </p>
+          </div>
         </div>
       </section>
     </div>
