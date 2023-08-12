@@ -23,6 +23,10 @@
       integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
       crossorigin="anonymous"
     ></script>
+    <script
+      src="https://kit.fontawesome.com/e4ba68d47f.js"
+      crossorigin="anonymous"
+    ></script>
     <style>
       html {
         scroll-behavior: smooth;
@@ -366,6 +370,13 @@
 
       .contact-me {
         background-color: #e9ecef;
+      }
+
+      .social-links a {
+        text-decoration: none;
+        color: #211c1c;
+        margin: 0 10px;
+        font-size: 24px;
       }
     </style>
   </head>
@@ -861,7 +872,7 @@
         <form
           action="https://formspree.io/f/mvojkqej"
           method="POST"
-          class="w-50 m-auto"
+          class="w-50 m-auto pb-5"
         >
           <div class="mb-3">
             <label
@@ -916,6 +927,37 @@
           </button>
         </form>
       </section>
+      <footer id="footer" class="p-3">
+        <div class="d-flex justify-content-between align-items-center p-4">
+          <div>© 2023 Flavorful Food</div>
+          <div>
+            Coded by Hanna Tkach for the SheCodes 🥘Flavorful Food Challenge
+          </div>
+          <div class="social-links">
+            <a
+              href="https://github.com/curiouscauliflower"
+              target="_blank"
+              title="GitHub Profile"
+            >
+              <i class="fab fa-github" aria-hidden="true"></i>
+            </a>
+            <a
+              href="https://www.instagram.com/leblogdeanne/"
+              target="_blank"
+              title="Instagram Profile"
+            >
+              <i class="fab fa-instagram" aria-hidden="true"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/hanna-tkach-31a32b277/"
+              target="_blank"
+              title="LinkedIn Profile"
+            >
+              <i class="fab fa-linkedin" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </footer>
     </div>
     <script>
       const popoverTriggerList = document.querySelectorAll(
