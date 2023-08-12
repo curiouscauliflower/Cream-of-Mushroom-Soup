@@ -168,7 +168,7 @@
       }
 
       .about-origin {
-        padding: 60px 250px;
+        padding: 40px 250px;
       }
 
       .about-origin h2 {
@@ -178,7 +178,6 @@
 
       .about-origin p {
         font-size: 20px;
-        padding-bottom: 30px;
         text-align: justify;
       }
 
@@ -189,12 +188,8 @@
         background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
         background-position-x: center, 250px, 670px, 250px, 710px;
         background-position-y: 70px, 350px, 516px, 10px, 0;
-        margin-bottom: 110px;
-      }
-
-      .about-ingredients h2 {
-        font-size: 40px;
-        padding: 0 30px;
+        margin-top: 100px;
+        margin-bottom: 100px;
       }
 
       .about-ingredients .mushrooms-img {
@@ -251,8 +246,7 @@
         gap: 100px;
       }
 
-      .about-flavors h3,
-      .stock {
+      .about-flavors h3 {
         border-top: 1px solid #211c1c;
         border-bottom: 1px solid #211c1c;
         padding: 10px 0;
@@ -287,6 +281,10 @@
         width: 310px;
       }
 
+      .recipe {
+        margin-top: 120px;
+      }
+
       .recipe img {
         border: 6px solid #83522d;
         border-radius: 50%;
@@ -308,10 +306,12 @@
         height: 46px;
         padding: 0 10px;
       }
+
       .rate:not(:checked) > input {
         position: absolute;
         clip: rect(0, 0, 0, 0);
       }
+
       .rate:not(:checked) > label {
         float: right;
         width: 1em;
@@ -321,16 +321,20 @@
         font-size: 30px;
         color: #ccc;
       }
+
       .rate:not(:checked) > label:before {
         content: "★ ";
       }
+
       .rate > input:checked ~ label {
         color: #ffc700;
       }
+
       .rate:not(:checked) > label:hover,
       .rate:not(:checked) > label:hover ~ label {
         color: #deb217;
       }
+
       .rate > input:checked + label:hover,
       .rate > input:checked + label:hover ~ label,
       .rate > input:checked ~ label:hover,
@@ -343,6 +347,7 @@
         font-family: "Dancing Script", cursive;
         font-size: 22px;
       }
+
       .recipe .recipe-container h3 {
         font-family: "Playfair Display", sans-serif;
         font-size: 40px;
@@ -363,6 +368,10 @@
         padding-left: 80px;
       }
 
+      .recommended {
+        margin-bottom: 100px;
+      }
+
       .about-me p {
         font-size: 20px;
         text-align: justify;
@@ -372,11 +381,32 @@
         background-color: #e9ecef;
       }
 
+      .contact-me button {
+        background-color: #fff;
+        padding: 16px 20px;
+        border: 2px solid #9cacbb;
+        font-weight: 500;
+        color: #211c1c;
+      }
+
+      .contact-me button:hover {
+        background-color: #9cacbb;
+      }
+
       .social-links a {
         text-decoration: none;
         color: #211c1c;
         margin: 0 10px;
         font-size: 24px;
+      }
+
+      .footer {
+        background: linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 1) 0%,
+          rgba(223, 201, 232, 1) 35%,
+          rgba(184, 225, 233, 1) 100%
+        );
       }
     </style>
   </head>
@@ -459,12 +489,12 @@
           </div>
         </div>
       </section>
-      <section id="origin" class="mb-5 about-origin">
+      <section id="origin" class="about-origin">
         <h2 class="m-5 text-center lh-base">
           The Origin Of <br />
           Cream Of Mushroom Soup
         </h2>
-        <p>
+        <p class="pb-4">
           It is believed Mushroom Soup had quite humble beginnings dating back
           to quite a few hundred years ago. Originating in France in the form of
           a Bechamel sauce or in Tuscany, Italy as Salsa colla, this is a creamy
@@ -472,7 +502,7 @@
           “glue sauce” due to its binding nature in dishes like pasta, lasagne
           etc.
         </p>
-        <p>
+        <p class="pb-4">
           The earliest record of Bechamel sauce recipe was in 1533 in France.
           However, it is believed it originated much earlier than this. Overtime
           the simple sauce recipe developed and changed creating the classic
@@ -565,7 +595,7 @@
         </div>
       </section>
       <section id="flavors" class="about-flavors">
-        <h2 class="text-center mt-5 mb-5">
+        <h2 class="text-center mb-5">
           What additional flavors make the soup so delicious?
         </h2>
         <div class="d-flex justify-content-center wrapper">
@@ -605,16 +635,14 @@
             </p>
           </div>
         </div>
-        <h3 class="text-center w-25 mx-auto mt-5 stock">Stock or broth</h3>
+        <h3 class="text-center w-25 mx-auto mt-5">Stock or broth</h3>
         <p class="w-50 mx-auto text-center">
           Chicken or beef work well for mushroom soup, just use what you have on
           hand. For a vegetarian option, use a good quality vegetable stock.
         </p>
       </section>
       <section id="recipe" class="recipe">
-        <h2 class="text-center mt-5 mb-5">
-          How to Make Cream of Mushroom Soup
-        </h2>
+        <h2 class="text-center mb-5">How to Make Cream of Mushroom Soup</h2>
         <img
           src="images/top-view-delicious-food-on-table.jpg"
           alt=""
@@ -747,7 +775,7 @@
               </div>
             </div>
           </div>
-          <div class="ratio ratio-16x9 w-75 m-auto">
+          <div class="ratio ratio-16x9 w-75 mx-auto">
             <iframe
               width="727"
               height="409"
@@ -760,7 +788,7 @@
           </div>
         </div>
       </section>
-      <section id="recommended" class="mb-5">
+      <section id="recommended" class="recommended">
         <h2 class="text-center mb-5">~ other recipes you may like ~</h2>
         <div class="row justify-content-center">
           <div class="col-3">
@@ -922,16 +950,15 @@
               required
             ></textarea>
           </div>
-          <button class="btn btn-primary d-block m-auto" type="submit">
-            Send message
-          </button>
+          <button class="btn d-block m-auto" type="submit">Send message</button>
         </form>
       </section>
-      <footer id="footer" class="p-3">
+      <footer id="footer" class="p-3 footer">
         <div class="d-flex justify-content-between align-items-center p-4">
           <div>© 2023 Flavorful Food</div>
           <div>
-            Coded by Hanna Tkach for the SheCodes 🥘Flavorful Food Challenge
+            Coded by <strong>Hanna Tkach</strong> for the
+            <strong>SheCodes</strong> 🥘Flavorful Food Challenge
           </div>
           <div class="social-links">
             <a
@@ -975,12 +1002,12 @@
       });
 
       ScrollReveal().reveal(
-        ".hero-content, .about-origin, .about-ingredients, .about-flavors"
+        ".hero-content, .about-origin, .about-ingredients, .about-flavors, .recipe, .recommended, .about-me, .contact-me"
       );
 
       let navbar = document.querySelector("nav");
       window.onscroll = () => {
-        if (window.scrollY > 250) {
+        if (window.scrollY > 220) {
           navbar.classList.add("nav-active");
         } else {
           navbar.classList.remove("nav-active");
