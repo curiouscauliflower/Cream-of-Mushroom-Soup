@@ -408,6 +408,10 @@
           rgba(184, 225, 233, 1) 100%
         );
       }
+      /* Removing bootstrap columns causing horizontal scrollbar */
+      .row {
+        overflow-x: auto;
+      }
     </style>
   </head>
   <body>
@@ -521,7 +525,7 @@
         <h2 class="text-center">
           What are the main ingredients needed for cooking?
         </h2>
-        <div class="row">
+        <div class="row m-auto">
           <div class="col-6">
             <img
               src="/images/mushrooms.png"
@@ -557,7 +561,7 @@
             </button>
           </div>
         </div>
-        <div class="row">
+        <div class="row m-auto">
           <div class="col-6">
             <img
               src="/images/flour.png"
@@ -790,7 +794,7 @@
       </section>
       <section id="recommended" class="recommended">
         <h2 class="text-center mb-5">~ other recipes you may like ~</h2>
-        <div class="row justify-content-center">
+        <div class="row m-auto justify-content-center">
           <div class="col-3">
             <div class="card">
               <img
@@ -869,7 +873,7 @@
         </div>
       </section>
       <section id="about-me" class="about-me">
-        <div class="row justify-content-center">
+        <div class="row m-auto justify-content-center">
           <div class="col-5">
             <img
               src="images/—Pngtree—female chef of dessert making_6939399.png"
