@@ -53,7 +53,6 @@
       nav li {
         display: inline-block;
         margin-left: 30px;
-        font-size: 18px;
         text-transform: uppercase;
       }
 
@@ -255,7 +254,6 @@
       .about-flavors p {
         width: 220px;
         text-align: justify;
-        font-size: 18px;
       }
 
       .about-flavors .garlic-img {
@@ -381,6 +379,11 @@
         background-color: #e9ecef;
       }
 
+      .contact-me span {
+        color: red;
+        font-weight: 600;
+      }
+
       .contact-me button {
         background-color: #fff;
         padding: 16px 20px;
@@ -391,13 +394,7 @@
 
       .contact-me button:hover {
         background-color: #9cacbb;
-      }
-
-      .social-links a {
-        text-decoration: none;
-        color: #211c1c;
-        margin: 0 10px;
-        font-size: 24px;
+        color: #fff;
       }
 
       .footer {
@@ -408,7 +405,15 @@
           rgba(184, 225, 233, 1) 100%
         );
       }
-      /* Removing bootstrap columns causing horizontal scrollbar */
+
+      .social-links a {
+        text-decoration: none;
+        color: #211c1c;
+        margin: 0 10px;
+        font-size: 24px;
+      }
+
+      /* Solution of the problem with bootstrap columns causing horizontal scrollbar */
       .row {
         overflow-x: auto;
       }
@@ -808,7 +813,7 @@
                   These easy baked stuffed bell peppers are full of
                   protein-packed beans and quinoa that will leave you full and
                   satisfied. So easy to make, flavorful, and the perfect freezer
-                  meal, and great for meal prep.
+                  meal.
                 </p>
                 <a
                   href="https://healthyfitnessmeals.com/vegetarian-stuffed-peppers/"
@@ -957,7 +962,7 @@
           <button class="btn d-block m-auto" type="submit">Send message</button>
         </form>
       </section>
-      <footer id="footer" class="p-3 footer">
+      <footer id="footer" class="p-5 footer">
         <div class="d-flex justify-content-between align-items-center p-4">
           <div>© 2023 Flavorful Food</div>
           <div>
