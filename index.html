@@ -243,42 +243,6 @@
         margin-top: 50px;
       }
 
-      @media (max-width: 1366px) {
-        .about-ingredients {
-          background-position-x: center, 250px, 670px, 250px, 710px;
-          background-position-y: 70px, 350px, 516px, 10px, 0;
-        }
-
-        .about-ingredients .mushrooms-img {
-          margin-left: 100px;
-        }
-
-        .about-ingredients .herbs-img {
-          margin-left: 260px;
-        }
-
-        .about-ingredients .flour-img {
-          margin-top: 100px;
-          margin-left: 220px;
-        }
-
-        .about-ingredients .cream-img {
-          margin-top: 0;
-        }
-
-        .about-ingredients .mushrooms-btn {
-          margin-left: 180px;
-        }
-
-        .about-ingredients .herbs-btn {
-          margin-left: 360px;
-        }
-
-        .about-ingredients .flour-btn {
-          margin-left: 350px;
-        }
-      }
-
       .about-flavors .wrapper {
         gap: 100px;
       }
@@ -408,9 +372,17 @@
         margin-bottom: 100px;
       }
 
+      .about-me {
+        margin-bottom: 70px;
+      }
+
       .about-me p {
         font-size: 20px;
         text-align: justify;
+      }
+
+      .about-me .introduction {
+        padding: 74px 44px 44px;
       }
 
       .contact-me {
@@ -454,6 +426,53 @@
       /* Solution of the problem with bootstrap columns causing horizontal scrollbar */
       .row {
         overflow-x: auto;
+      }
+
+      /* Responsive */
+      @media (max-width: 1366px) {
+        .about-ingredients {
+          background-position-x: center, 250px, 670px, 250px, 710px;
+          background-position-y: 70px, 350px, 516px, 10px, 0;
+        }
+
+        .about-ingredients .mushrooms-img {
+          margin-left: 100px;
+        }
+
+        .about-ingredients .herbs-img {
+          margin-left: 260px;
+        }
+
+        .about-ingredients .flour-img {
+          margin-top: 100px;
+          margin-left: 220px;
+        }
+
+        .about-ingredients .cream-img {
+          margin-top: 0;
+        }
+
+        .about-ingredients .mushrooms-btn {
+          margin-left: 180px;
+        }
+
+        .about-ingredients .herbs-btn {
+          margin-left: 360px;
+        }
+
+        .about-ingredients .flour-btn {
+          margin-left: 350px;
+        }
+
+        .about-me .introduction {
+          padding: 44px;
+        }
+      }
+
+      @media (max-width: 1280px) {
+        .about-me .introduction {
+          padding: 30px;
+        }
       }
     </style>
   </head>
@@ -917,14 +936,14 @@
       </section>
       <section id="about-me" class="about-me">
         <div class="row m-auto justify-content-center">
-          <div class="col-5">
+          <div class="col-5 p-0">
             <img
               src="images/—Pngtree—female chef of dessert making_6939399.png"
               alt="A cute female chef"
               class="img-fluid"
             />
           </div>
-          <div class="col-5 p-5">
+          <div class="col-5 introduction">
             <p class="lh-lg">
               👋 Hello! My name is Hanna and welcome to my makeshift kitchen.
               Today I want to share one of my all-time favorite soup recipes,
