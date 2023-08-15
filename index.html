@@ -498,6 +498,36 @@
           padding: 30px;
         }
       }
+
+      @media (max-width: 1024px) {
+        .about-origin {
+          padding: 40px 150px;
+        }
+
+        .about-flavors .wrapper {
+          gap: 50px;
+        }
+
+        .recipe .border-right {
+          padding-right: 40px;
+        }
+
+        .recipe .border-left {
+          padding-left: 40px;
+        }
+
+        .about-me .introduction {
+          padding: 0;
+        }
+
+        .about-me p {
+          line-height: 1.6 !important;
+        }
+
+        .footer .wrapper {
+          flex-direction: column;
+        }
+      }
     </style>
   </head>
   <body>
@@ -1049,7 +1079,9 @@
         </form>
       </section>
       <footer id="footer" class="p-5 footer">
-        <div class="d-flex justify-content-between align-items-center p-4">
+        <div
+          class="d-flex justify-content-between align-items-center p-4 wrapper"
+        >
           <div><p>© 2023 🥮Flavorful Food</p></div>
           <div>
             <p>
