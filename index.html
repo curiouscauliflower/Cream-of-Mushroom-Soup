@@ -584,7 +584,6 @@
         }
 
         .about-ingredients {
-          background-size: 400px 330px 330px 330px 330px;
           background-position-x: center, 90px, 510px, 160px, 480px;
           background-position-y: 70px, 370px, 520px, -20px, -20px;
         }
@@ -665,6 +664,122 @@
 
         .about-ingredients .flour-btn {
           margin-left: 170px;
+        }
+      }
+
+      @media (max-width: 800px) {
+        .about-ingredients {
+          background-position-x: center, 80px, 390px, 130px, 390px;
+          background-position-y: 70px, 300px, 350px, -30px, -20px;
+          background-size: 500px, 260px, 280px, 350px, 260px;
+        }
+
+        .about-ingredients .mushrooms-img {
+          width: 240px;
+          margin-left: 0;
+        }
+
+        .about-ingredients .herbs-img {
+          width: 200px;
+          margin-left: 160px;
+        }
+
+        .about-ingredients .flour-img {
+          width: 240px;
+          margin-left: 60px;
+          margin-top: 110px;
+        }
+
+        .about-ingredients .cream-img {
+          width: 160px;
+          height: 310px;
+          margin-left: 180px;
+          margin-top: -10px;
+        }
+
+        .about-ingredients .mushrooms-btn {
+          margin-left: 50px;
+        }
+
+        .about-ingredients .herbs-btn {
+          margin-left: 210px;
+        }
+
+        .about-ingredients .flour-btn {
+          margin-left: 150px;
+        }
+
+        .about-ingredients .cream-btn {
+          margin-left: 208px;
+        }
+
+        .about-flavors .wrapper {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .recipe .border-right {
+          padding-right: 20px;
+        }
+
+        .recipe .border-left {
+          padding-left: 20px;
+        }
+
+        .about-me .wrapper {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .about-ingredients {
+          background-position-x: center, 90px, 340px, 130px, 380px;
+          background-position-y: 70px, 290px, 325px, -30px, -20px;
+          background-size: 450px, 250px, 270px, 340px, 250px;
+        }
+
+        .about-ingredients .mushrooms-img {
+          width: 240px;
+          margin-top: -20px;
+        }
+
+        .about-ingredients .herbs-img {
+          width: 200px;
+          margin-left: 130px;
+          margin-top: -10px;
+        }
+
+        .about-ingredients .flour-img {
+          margin-left: 60px;
+          margin-top: 100px;
+        }
+
+        .about-ingredients .cream-img {
+          width: 150px;
+          height: 300px;
+          margin-left: 140px;
+          margin-top: -10px;
+        }
+
+        .about-ingredients button {
+          padding: 10px 14px;
+        }
+
+        .about-ingredients .mushrooms-btn {
+          margin-left: 50px;
+        }
+
+        .about-ingredients .herbs-btn {
+          margin-left: 200px;
+        }
+
+        .about-ingredients .flour-btn {
+          margin-left: 160px;
+        }
+
+        .about-ingredients .cream-btn {
+          margin-left: 168px;
         }
       }
     </style>
@@ -833,7 +948,7 @@
         </p>
       </section>
       <section id="ingredients" class="about-ingredients">
-        <h2 class="text-center">
+        <h2 class="text-center px-md-3 px-lg-0">
           What are the main ingredients needed for cooking?
         </h2>
         <div class="row m-auto">
@@ -910,7 +1025,7 @@
         </div>
       </section>
       <section id="flavors" class="about-flavors">
-        <h2 class="text-center mb-5">
+        <h2 class="text-center mb-5 px-md-3 px-lg-0">
           What additional flavors make the soup so delicious?
         </h2>
         <div class="d-flex justify-content-center wrapper">
@@ -1188,7 +1303,7 @@
         </div>
       </section>
       <section id="about-me" class="about-me">
-        <div class="row m-auto justify-content-center">
+        <div class="row m-auto justify-content-center wrapper">
           <div class="col-5 p-0">
             <img
               src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/093/602/original/cute-female-chef.png?1692124381"
