@@ -1809,6 +1809,17 @@
       </footer>
     </div>
     <script>
+      //Changing the background color of the navigation bar
+      let navbar = document.querySelector("nav");
+      window.onscroll = () => {
+        if (window.scrollY > 250) {
+          navbar.classList.add("nav-active");
+        } else {
+          navbar.classList.remove("nav-active");
+        }
+      };
+
+      // Bootstrap 5 Popover
       const popoverTriggerList = document.querySelectorAll(
         '[data-bs-toggle="popover"]'
       );
@@ -1816,9 +1827,10 @@
         (popoverTriggerEl) => new bootstrap.Popover(popoverTriggerEl)
       );
 
+      //JavaScript library to animate elements as they scroll into view
       ScrollReveal({
         reset: true,
-        distance: "150px",
+        distance: "200px",
         duration: 2000,
         delay: 200,
       });
@@ -1827,15 +1839,7 @@
         ".hero-content, .about-origin, .about-ingredients, .about-flavors, .recipe, .recommended, .about-me, .contact-me"
       );
 
-      let navbar = document.querySelector("nav");
-      window.onscroll = () => {
-        if (window.scrollY > 220) {
-          navbar.classList.add("nav-active");
-        } else {
-          navbar.classList.remove("nav-active");
-        }
-      };
-
+      //Bootstrap 5 Dropdowns
       $(".dropdown-toggle").dropdown();
     </script>
   </body>
