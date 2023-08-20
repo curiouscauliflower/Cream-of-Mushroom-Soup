@@ -189,27 +189,27 @@
         box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
           rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
           rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-        width: 750px;
+        width: 950px;
         margin: 180px auto;
-        padding-bottom: 50px;
+        padding-bottom: 70px;
         border: 1px solid #83522d;
       }
 
       .hero-content h1 {
         font-family: "Playfair Display", sans-serif;
-        font-size: 56px;
+        font-size: 64px;
         line-height: 1.2;
         color: #fff;
-        margin-top: 20px;
+        margin-top: 40px;
       }
 
       .hero-content p {
         font-family: "Dancing Script", cursive;
-        font-size: 34px;
-        width: 600px;
+        font-size: 40px;
+        width: 700px;
         color: white;
-        margin: 20px auto 50px;
-        padding: 8px 0;
+        margin: 30px auto 60px;
+        padding: 10px 0;
         border-top: 1px solid #fff;
         border-bottom: 1px solid #fff;
       }
@@ -217,13 +217,13 @@
       .hero-content a {
         text-decoration: none;
         border-radius: 4px;
-        font-size: 18px;
+        font-size: 22px;
         transition: all 0.3s ease-in;
       }
 
       .hero-content .learn-button {
         background-color: #fff;
-        padding: 18px 34px;
+        padding: 22px 38px;
         color: #211c1c;
       }
 
@@ -235,7 +235,7 @@
 
       .hero-content .recipe-button {
         background-color: transparent;
-        padding: 16px 20px;
+        padding: 20px 24px;
         border: 2px solid white;
         color: white;
       }
@@ -512,6 +512,71 @@
       }
 
       /* Responsive */
+      @media (max-width: 1440px) {
+        .hero {
+          background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/093/582/original/mushroom-soup-and-white-copy-space.jpg?1692123259);
+          background-size: cover;
+          background-position-x: center;
+          overflow: auto;
+        }
+
+        .hero-content {
+          width: 750px;
+          margin: 180px auto;
+          padding-bottom: 50px;
+        }
+
+        .hero-content h1 {
+          font-family: "Playfair Display", sans-serif;
+          font-size: 56px;
+          line-height: 1.2;
+          color: #fff;
+          margin-top: 20px;
+        }
+
+        .hero-content p {
+          font-family: "Dancing Script", cursive;
+          font-size: 34px;
+          width: 600px;
+          color: white;
+          margin: 20px auto 50px;
+          padding: 8px 0;
+          border-top: 1px solid #fff;
+          border-bottom: 1px solid #fff;
+        }
+
+        .hero-content a {
+          text-decoration: none;
+          border-radius: 4px;
+          font-size: 18px;
+          transition: all 0.3s ease-in;
+        }
+
+        .hero-content .learn-button {
+          background-color: #fff;
+          padding: 18px 34px;
+          color: #211c1c;
+        }
+
+        .hero-content .learn-button:hover {
+          color: #fff;
+          background-color: transparent;
+          box-shadow: 0 0 0 2px #fff;
+        }
+
+        .hero-content .recipe-button {
+          background-color: transparent;
+          padding: 16px 20px;
+          border: 2px solid white;
+          color: white;
+        }
+
+        .hero-content .recipe-button:hover {
+          color: #211c1c;
+          background-color: #fff;
+        }
+      }
+
       @media (max-width: 1366px) {
         .about-ingredients {
           background-position-x: center, 250px, 670px, 250px, 710px;
@@ -575,6 +640,37 @@
 
         .about-me .introduction {
           padding: 30px;
+        }
+      }
+
+      @media (max-width: 1194px) {
+        .about-ingredients {
+          background-position-x: center, 170px, 620px, 220px, 600px;
+          background-position-y: 70px, 350px, 516px, -10px, -10px;
+        }
+
+        .about-ingredients .herbs-img {
+          margin-left: 220px;
+        }
+
+        .about-ingredients .flour-img {
+          margin-left: 130px;
+        }
+
+        .about-ingredients .herbs-btn {
+          margin-left: 320px;
+        }
+
+        .about-ingredients .flour-btn {
+          margin-left: 260px;
+        }
+
+        .recipe .border-right {
+          padding-right: 60px;
+        }
+
+        .recipe .border-left {
+          padding-left: 60px;
         }
       }
 
@@ -668,6 +764,21 @@
 
         .about-me p {
           line-height: 2 !important;
+        }
+      }
+
+      @media (max-width: 926px) {
+        .about-ingredients {
+          background-position-x: center, 40px, 450px, 150px, 454px;
+          background-position-y: 70px, 370px, 520px, -30px, -20px;
+        }
+
+        .about-ingredients .flour-img {
+          margin-left: 40px;
+        }
+
+        .about-ingredients .flour-btn {
+          margin-left: 150px;
         }
       }
 
