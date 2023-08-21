@@ -34,8 +34,12 @@
 
       body {
         font-family: "Montserrat", sans-serif;
-        font-size: 18px;
+        font-size: 22px;
         color: #211c1c;
+      }
+
+      h2 {
+        font-size: 42px;
       }
 
       ul {
@@ -48,6 +52,10 @@
         background-color: rgb(242, 230, 209, 0.6);
         padding: 10px 80px 10px 30px;
         transition: 0.2s ease-in-out;
+      }
+
+      nav .dropdown-menu {
+        --bs-dropdown-font-size: 22px;
       }
 
       nav li {
@@ -90,7 +98,7 @@
       }
 
       .logo {
-        height: 70px;
+        height: 90px;
       }
 
       .nav-active {
@@ -98,11 +106,11 @@
         box-shadow: 5px -1px 12px -5px grey;
       }
 
-      #menu__toggle {
+      .burger-menu #menu__toggle {
         opacity: 0;
       }
 
-      .menu__btn {
+      .burger-menu .menu__btn {
         display: flex;
         align-items: center;
         position: fixed;
@@ -114,9 +122,9 @@
         z-index: 1;
       }
 
-      .menu__btn > span,
-      .menu__btn > span::before,
-      .menu__btn > span::after {
+      .burger-menu .menu__btn > span,
+      .burger-menu .menu__btn > span::before,
+      .burger-menu .menu__btn > span::after {
         display: block;
         position: absolute;
         width: 100%;
@@ -125,17 +133,17 @@
         transition: 0.3s;
       }
 
-      .menu__btn > span::before {
+      .burger-menu .menu__btn > span::before {
         content: "";
         top: -8px;
       }
 
-      .menu__btn > span::after {
+      .burger-menu .menu__btn > span::after {
         content: "";
         top: 8px;
       }
 
-      .menu__box {
+      .burger-menu .menu__box {
         display: block;
         position: fixed;
         visibility: hidden;
@@ -152,27 +160,27 @@
         overflow-y: scroll;
       }
 
-      .menu__item {
+      .burger-menu .menu__item {
         display: block;
         padding: 12px 24px;
         font-size: 20px;
       }
 
-      #menu__toggle:checked ~ .menu__btn > span {
+      .burger-menu #menu__toggle:checked ~ .menu__btn > span {
         transform: rotate(45deg);
       }
 
-      #menu__toggle:checked ~ .menu__btn > span::before {
+      .burger-menu #menu__toggle:checked ~ .menu__btn > span::before {
         top: 0;
         transform: rotate(0);
       }
 
-      #menu__toggle:checked ~ .menu__btn > span::after {
+      .burger-menu #menu__toggle:checked ~ .menu__btn > span::after {
         top: 0;
         transform: rotate(90deg);
       }
 
-      #menu__toggle:checked ~ .menu__box {
+      .burger-menu #menu__toggle:checked ~ .menu__box {
         visibility: visible;
         left: 0;
       }
@@ -246,16 +254,16 @@
       }
 
       .about-origin {
-        padding: 40px 250px;
+        padding: 40px 350px;
       }
 
       .about-origin h2 {
         font-family: "Playfair Display", sans-serif;
-        font-size: 44px;
+        font-size: 54px;
       }
 
       .about-origin p {
-        font-size: 20px;
+        font-size: 24px;
         text-align: justify;
       }
 
@@ -266,38 +274,40 @@
           url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/093/587/original/blue-line-mushrooms.png?1692123584),
           url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/093/586/original/blue-line-herbs.png?1692123564);
         background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
-        background-position-x: center, 290px, 720px, 280px, 760px;
-        background-position-y: 70px, 380px, 530px, 10px, 0;
+        background-size: 840px, 400px, 400px, 517px, 400px;
+        background-position-x: center, 310px, 800px, 350px, 850px;
+        background-position-y: 70px, 400px, 570px, -40px, -50px;
         margin-top: 100px;
         margin-bottom: 100px;
       }
 
       .about-ingredients .mushrooms-img {
-        width: 300px;
-        margin-left: 120px;
+        width: 340px;
+        margin-left: 150px;
       }
 
       .about-ingredients .herbs-img {
-        width: 290px;
-        margin-left: 280px;
+        width: 330px;
+        margin-left: 310px;
       }
 
       .about-ingredients .flour-img {
-        width: 300px;
-        margin-top: 140px;
-        margin-left: 240px;
+        width: 340px;
+        margin-top: 160px;
+        margin-left: 270px;
       }
 
       .about-ingredients .cream-img {
-        width: 200px;
-        height: 350px;
-        margin-left: 230px;
+        width: 240px;
+        height: 410px;
+        margin-left: 250px;
         margin-top: 40px;
       }
 
       .about-ingredients button {
         background-color: transparent;
-        padding: 16px 20px;
+        padding: 20px 24px;
+        font-size: 22px;
         border: 2px solid #9cacbb;
         transition: all 0.3s ease-in;
       }
@@ -309,20 +319,24 @@
 
       .about-ingredients .mushrooms-btn {
         margin-top: -20px;
-        margin-left: 200px;
+        margin-left: 230px;
       }
 
       .about-ingredients .herbs-btn {
-        margin-left: 380px;
+        margin-left: 410px;
       }
 
       .about-ingredients .flour-btn {
-        margin-left: 370px;
+        margin-left: 410px;
       }
 
       .about-ingredients .cream-btn {
-        margin-left: 274px;
+        margin-left: 294px;
         margin-top: 50px;
+      }
+
+      .about-ingredients .popover {
+        font-size: 20px;
       }
 
       .about-flavors .wrapper {
@@ -336,31 +350,30 @@
       }
 
       .about-flavors p {
-        width: 220px;
         text-align: justify;
       }
 
-      .about-flavors .garlic-img {
-        width: 220px;
-        height: 220px;
-      }
-
+      .about-flavors .garlic-img,
       .about-flavors .onions-img {
-        width: 220px;
-        height: 220px;
+        width: 250px;
+        height: 250px;
       }
 
       .about-flavors .wine-img {
-        width: 310px;
-        height: 220px;
+        width: 340px;
+        height: 250px;
+      }
+
+      .about-flavors .garlic-description {
+        width: 250px;
       }
 
       .about-flavors .onions-description {
-        width: 260px;
+        width: 300px;
       }
 
       .about-flavors .wine-description {
-        width: 310px;
+        width: 350px;
       }
 
       .recipe {
@@ -370,8 +383,8 @@
       .recipe img {
         border: 6px solid #83522d;
         border-radius: 50%;
-        width: 250px;
-        height: 250px;
+        width: 320px;
+        height: 320px;
         object-fit: cover;
         position: relative;
         z-index: 1;
@@ -384,55 +397,59 @@
         z-index: 0;
       }
 
-      .rate {
+      .recipe .rate {
         height: 46px;
         padding: 0 10px;
       }
 
-      .rate:not(:checked) > input {
+      .recipe .rate:not(:checked) > input {
         position: absolute;
         clip: rect(0, 0, 0, 0);
       }
 
-      .rate:not(:checked) > label {
+      .recipe .rate:not(:checked) > label {
         float: right;
         width: 1em;
         overflow: hidden;
         white-space: nowrap;
         cursor: pointer;
-        font-size: 30px;
+        font-size: 42px;
         color: #ccc;
       }
 
-      .rate:not(:checked) > label:before {
+      .recipe .rate:not(:checked) > label:before {
         content: "★ ";
       }
 
-      .rate > input:checked ~ label {
+      .recipe .rate > input:checked ~ label {
         color: #ffc700;
       }
 
-      .rate:not(:checked) > label:hover,
-      .rate:not(:checked) > label:hover ~ label {
+      .recipe .rate:not(:checked) > label:hover,
+      .recipe .rate:not(:checked) > label:hover ~ label {
         color: #deb217;
       }
 
-      .rate > input:checked + label:hover,
-      .rate > input:checked + label:hover ~ label,
-      .rate > input:checked ~ label:hover,
-      .rate > input:checked ~ label:hover ~ label,
-      .rate > label:hover ~ input:checked ~ label {
+      .recipe .rate > input:checked + label:hover,
+      .recipe .rate > input:checked + label:hover ~ label,
+      .recipe .rate > input:checked ~ label:hover,
+      .recipe .rate > input:checked ~ label:hover ~ label,
+      .recipe .rate > label:hover ~ input:checked ~ label {
         color: #c59b08;
       }
 
       .recipe .recipe-container p {
         font-family: "Dancing Script", cursive;
-        font-size: 22px;
+        font-size: 28px;
       }
 
       .recipe .recipe-container h3 {
         font-family: "Playfair Display", sans-serif;
-        font-size: 40px;
+        font-size: 48px;
+      }
+
+      .recipe .accordion-button {
+        font-size: 22px;
       }
 
       .recipe .borders {
@@ -442,16 +459,20 @@
 
       .recipe .border-right {
         border-right: 1px dotted #211c1c;
-        padding-right: 80px;
+        padding-right: 90px;
       }
 
       .recipe .border-left {
         border-left: 1px dotted #211c1c;
-        padding-left: 80px;
+        padding-left: 90px;
       }
 
       .recommended {
         margin-bottom: 100px;
+      }
+
+      .recommended a {
+        font-size: 22px;
       }
 
       .about-me {
@@ -459,12 +480,12 @@
       }
 
       .about-me p {
-        font-size: 20px;
+        font-size: 26px;
         text-align: justify;
       }
 
       .about-me .introduction {
-        padding: 74px 44px 44px;
+        padding: 40px 34px 34px;
       }
 
       .contact-me {
@@ -476,9 +497,14 @@
         font-weight: 600;
       }
 
+      .contact-me .form-control {
+        font-size: 22px;
+      }
+
       .contact-me button {
         background-color: #fff;
-        padding: 16px 20px;
+        font-size: 22px;
+        padding: 20px 24px;
         border: 2px solid #9cacbb;
         font-weight: 500;
         color: #211c1c;
@@ -503,7 +529,7 @@
         text-decoration: none;
         color: #211c1c;
         margin: 0 10px;
-        font-size: 24px;
+        font-size: 30px;
       }
 
       /* Solution of the problem with bootstrap columns causing horizontal scrollbar */
@@ -513,29 +539,37 @@
 
       /* Responsive */
       @media (max-width: 1440px) {
+        body {
+          font-size: 18px;
+        }
+
+        h2 {
+          font-size: 32px;
+        }
+
+        nav .dropdown-menu {
+          --bs-dropdown-font-size: 1rem;
+        }
+
+        .logo {
+          height: 70px;
+        }
+
         .hero-content {
           width: 750px;
-          margin: 180px auto;
           padding-bottom: 50px;
         }
 
         .hero-content h1 {
-          font-family: "Playfair Display", sans-serif;
           font-size: 56px;
-          line-height: 1.2;
-          color: #fff;
           margin-top: 20px;
         }
 
         .hero-content p {
-          font-family: "Dancing Script", cursive;
           font-size: 34px;
           width: 600px;
-          color: white;
           margin: 20px auto 50px;
           padding: 8px 0;
-          border-top: 1px solid #fff;
-          border-bottom: 1px solid #fff;
         }
 
         .hero-content a {
@@ -548,6 +582,151 @@
 
         .hero-content .recipe-button {
           padding: 16px 20px;
+        }
+
+        .about-origin {
+          padding: 40px 250px;
+        }
+
+        .about-origin h2 {
+          font-size: 44px;
+        }
+
+        .about-origin p {
+          font-size: 20px;
+        }
+
+        .about-ingredients {
+          background-size: 740px, 300px, 300px, 417px, 300px;
+          background-position-x: center, 290px, 720px, 280px, 760px;
+          background-position-y: 70px, 380px, 530px, 10px, 0;
+        }
+
+        .about-ingredients .mushrooms-img {
+          width: 300px;
+          margin-left: 120px;
+        }
+
+        .about-ingredients .herbs-img {
+          width: 290px;
+          margin-left: 280px;
+        }
+
+        .about-ingredients .flour-img {
+          width: 300px;
+          margin-top: 140px;
+          margin-left: 240px;
+        }
+
+        .about-ingredients .cream-img {
+          width: 200px;
+          height: 350px;
+          margin-left: 230px;
+          margin-top: 40px;
+        }
+
+        .about-ingredients button {
+          padding: 16px 20px;
+          font-size: 16px;
+        }
+
+        .about-ingredients .mushrooms-btn {
+          margin-top: -20px;
+          margin-left: 200px;
+        }
+
+        .about-ingredients .herbs-btn {
+          margin-left: 380px;
+        }
+
+        .about-ingredients .flour-btn {
+          margin-left: 370px;
+        }
+
+        .about-ingredients .cream-btn {
+          margin-left: 274px;
+          margin-top: 50px;
+        }
+
+        .about-ingredients .popover {
+          font-size: 16px;
+        }
+
+        .about-flavors .garlic-img,
+        .about-flavors .onions-img {
+          width: 220px;
+          height: 220px;
+        }
+
+        .about-flavors .wine-img {
+          width: 310px;
+          height: 220px;
+        }
+
+        .about-flavors .garlic-description {
+          width: 220px;
+        }
+
+        .about-flavors .onions-description {
+          width: 260px;
+        }
+
+        .about-flavors .wine-description {
+          width: 310px;
+        }
+
+        .recipe img {
+          width: 250px;
+          height: 250px;
+        }
+
+        .recipe .rate:not(:checked) > label {
+          font-size: 30px;
+        }
+
+        .recipe .recipe-container p {
+          font-size: 22px;
+        }
+
+        .recipe .recipe-container h3 {
+          font-size: 40px;
+        }
+
+        .recipe .accordion-button {
+          font-size: 16px;
+        }
+
+        .recipe .border-right {
+          padding-right: 80px;
+        }
+
+        .recipe .border-left {
+          padding-left: 80px;
+        }
+
+        .recommended a {
+          font-size: 16px;
+        }
+
+        .about-me p {
+          font-size: 20px;
+        }
+
+        .about-me .introduction {
+          padding: 74px 44px 44px;
+        }
+
+        .contact-me .form-control {
+          font-size: 16px;
+        }
+
+        .contact-me button {
+          font-size: 16px;
+          padding: 16px 20px;
+        }
+
+        .social-links a {
+          font-size: 24px;
         }
       }
 
@@ -1503,7 +1682,7 @@
               class="img-fluid garlic-img"
             />
             <h3 class="text-center mt-4">Garlic</h3>
-            <p>
+            <p class="garlic-description">
               Fresh garlic is best, but you can use minced if that’s all you
               have on hand.
             </p>
