@@ -538,6 +538,509 @@
       }
 
       /* Responsive */
+      @media (max-width: 1680px) {
+        body {
+          font-family: "Montserrat", sans-serif;
+          font-size: 22px;
+          color: #211c1c;
+        }
+
+        h2 {
+          font-size: 42px;
+        }
+
+        ul {
+          padding: 0;
+          margin: 0;
+          list-style: none;
+        }
+
+        nav {
+          background-color: rgb(242, 230, 209, 0.6);
+          padding: 10px 80px 10px 30px;
+          transition: 0.2s ease-in-out;
+        }
+
+        nav .dropdown-menu {
+          --bs-dropdown-font-size: 22px;
+        }
+
+        nav li {
+          display: inline-block;
+          margin-left: 30px;
+          text-transform: uppercase;
+        }
+
+        nav li a {
+          text-decoration: none;
+          color: #211c1c;
+        }
+
+        a.hover-link {
+          transition: color 0.5s ease-in-out;
+          position: relative;
+        }
+
+        a.hover-link:hover {
+          color: #83522d;
+        }
+
+        a.hover-link:after {
+          content: "";
+          display: block;
+          position: absolute;
+          bottom: -1px;
+          left: 0;
+          height: 2px;
+          width: 100%;
+          background-color: transparent;
+          transform-origin: left top;
+          transform: scaleX(0);
+          transition: color 0.5s, transform 0.2s ease-in-out;
+        }
+
+        a.hover-link:hover:after {
+          transform: scaleX(1);
+          background-color: #211c1c;
+        }
+
+        .logo {
+          height: 90px;
+        }
+
+        .nav-active {
+          background-color: #fff;
+          box-shadow: 5px -1px 12px -5px grey;
+        }
+
+        .burger-menu #menu__toggle {
+          opacity: 0;
+        }
+
+        .burger-menu .menu__btn {
+          display: flex;
+          align-items: center;
+          position: fixed;
+          top: 20px;
+          right: 50px;
+          width: 32px;
+          height: 40px;
+          cursor: pointer;
+          z-index: 1;
+        }
+
+        .burger-menu .menu__btn > span,
+        .burger-menu .menu__btn > span::before,
+        .burger-menu .menu__btn > span::after {
+          display: block;
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          background-color: #211c1c;
+          transition: 0.3s;
+        }
+
+        .burger-menu .menu__btn > span::before {
+          content: "";
+          top: -8px;
+        }
+
+        .burger-menu .menu__btn > span::after {
+          content: "";
+          top: 8px;
+        }
+
+        .burger-menu .menu__box {
+          display: block;
+          position: fixed;
+          visibility: hidden;
+          top: 0;
+          left: -100%;
+          width: 270px;
+          height: 100%;
+          margin: 0;
+          padding: 20px 0 0;
+          text-align: center;
+          background-color: rgb(242, 230, 209, 0.9);
+          box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
+          transition: 0.3s;
+          overflow-y: scroll;
+        }
+
+        .burger-menu .menu__item {
+          display: block;
+          padding: 12px 24px;
+          font-size: 20px;
+        }
+
+        .burger-menu #menu__toggle:checked ~ .menu__btn > span {
+          transform: rotate(45deg);
+        }
+
+        .burger-menu #menu__toggle:checked ~ .menu__btn > span::before {
+          top: 0;
+          transform: rotate(0);
+        }
+
+        .burger-menu #menu__toggle:checked ~ .menu__btn > span::after {
+          top: 0;
+          transform: rotate(90deg);
+        }
+
+        .burger-menu #menu__toggle:checked ~ .menu__box {
+          visibility: visible;
+          left: 0;
+        }
+
+        .hero {
+          background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/093/582/original/mushroom-soup-and-white-copy-space.jpg?1692123259);
+          background-size: cover;
+          background-position-x: center;
+          overflow: auto;
+        }
+
+        .hero-content {
+          background-color: rgb(101, 95, 42, 0.5);
+          box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+            rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+            rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+          width: 950px;
+          margin: 180px auto;
+          padding-bottom: 70px;
+          border: 1px solid #83522d;
+        }
+
+        .hero-content h1 {
+          font-family: "Playfair Display", sans-serif;
+          font-size: 64px;
+          line-height: 1.2;
+          color: #fff;
+          margin-top: 40px;
+        }
+
+        .hero-content p {
+          font-family: "Dancing Script", cursive;
+          font-size: 40px;
+          width: 700px;
+          color: white;
+          margin: 30px auto 60px;
+          padding: 10px 0;
+          border-top: 1px solid #fff;
+          border-bottom: 1px solid #fff;
+        }
+
+        .hero-content a {
+          text-decoration: none;
+          border-radius: 4px;
+          font-size: 22px;
+          transition: all 0.3s ease-in;
+        }
+
+        .hero-content .learn-button {
+          background-color: #fff;
+          padding: 22px 38px;
+          color: #211c1c;
+        }
+
+        .hero-content .learn-button:hover {
+          color: #fff;
+          background-color: transparent;
+          box-shadow: 0 0 0 2px #fff;
+        }
+
+        .hero-content .recipe-button {
+          background-color: transparent;
+          padding: 20px 24px;
+          border: 2px solid white;
+          color: white;
+        }
+
+        .hero-content .recipe-button:hover {
+          color: #211c1c;
+          background-color: #fff;
+        }
+
+        .about-origin {
+          padding: 40px 350px;
+        }
+
+        .about-origin h2 {
+          font-family: "Playfair Display", sans-serif;
+          font-size: 54px;
+        }
+
+        .about-origin p {
+          font-size: 24px;
+          text-align: justify;
+        }
+
+        .about-ingredients {
+          background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/093/583/original/mushroom-soup-in-a-bowl.png?1692123357),
+            url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/093/585/original/blue-line-flour.png?1692123541),
+            url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/093/584/original/blue-line-cream.png?1692123506),
+            url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/093/587/original/blue-line-mushrooms.png?1692123584),
+            url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/093/586/original/blue-line-herbs.png?1692123564);
+          background-repeat: no-repeat, no-repeat, no-repeat, no-repeat,
+            no-repeat;
+          background-size: 840px, 400px, 400px, 517px, 400px;
+          background-position-x: center, 310px, 800px, 350px, 850px;
+          background-position-y: 70px, 400px, 570px, -40px, -50px;
+          margin-top: 100px;
+          margin-bottom: 100px;
+        }
+
+        .about-ingredients .mushrooms-img {
+          width: 340px;
+          margin-left: 150px;
+        }
+
+        .about-ingredients .herbs-img {
+          width: 330px;
+          margin-left: 310px;
+        }
+
+        .about-ingredients .flour-img {
+          width: 340px;
+          margin-top: 160px;
+          margin-left: 270px;
+        }
+
+        .about-ingredients .cream-img {
+          width: 240px;
+          height: 410px;
+          margin-left: 250px;
+          margin-top: 40px;
+        }
+
+        .about-ingredients button {
+          background-color: transparent;
+          padding: 20px 24px;
+          font-size: 22px;
+          border: 2px solid #9cacbb;
+          transition: all 0.3s ease-in;
+        }
+
+        .about-ingredients button:hover {
+          background-color: #9cacbb;
+          color: #fff;
+        }
+
+        .about-ingredients .mushrooms-btn {
+          margin-top: -20px;
+          margin-left: 230px;
+        }
+
+        .about-ingredients .herbs-btn {
+          margin-left: 410px;
+        }
+
+        .about-ingredients .flour-btn {
+          margin-left: 410px;
+        }
+
+        .about-ingredients .cream-btn {
+          margin-left: 294px;
+          margin-top: 50px;
+        }
+
+        .about-ingredients .popover {
+          font-size: 20px;
+        }
+
+        .about-flavors .wrapper {
+          gap: 100px;
+        }
+
+        .about-flavors h3 {
+          border-top: 1px solid #211c1c;
+          border-bottom: 1px solid #211c1c;
+          padding: 10px 0;
+        }
+
+        .about-flavors p {
+          text-align: justify;
+        }
+
+        .about-flavors .garlic-img,
+        .about-flavors .onions-img {
+          width: 250px;
+          height: 250px;
+        }
+
+        .about-flavors .wine-img {
+          width: 340px;
+          height: 250px;
+        }
+
+        .about-flavors .garlic-description {
+          width: 250px;
+        }
+
+        .about-flavors .onions-description {
+          width: 300px;
+        }
+
+        .about-flavors .wine-description {
+          width: 350px;
+        }
+
+        .recipe {
+          margin-top: 120px;
+        }
+
+        .recipe img {
+          border: 6px solid #83522d;
+          border-radius: 50%;
+          width: 320px;
+          height: 320px;
+          object-fit: cover;
+          position: relative;
+          z-index: 1;
+        }
+
+        .recipe .recipe-container {
+          padding-top: 160px;
+          position: relative;
+          top: -140px;
+          z-index: 0;
+        }
+
+        .recipe .rate {
+          height: 46px;
+          padding: 0 10px;
+        }
+
+        .recipe .rate:not(:checked) > input {
+          position: absolute;
+          clip: rect(0, 0, 0, 0);
+        }
+
+        .recipe .rate:not(:checked) > label {
+          float: right;
+          width: 1em;
+          overflow: hidden;
+          white-space: nowrap;
+          cursor: pointer;
+          font-size: 42px;
+          color: #ccc;
+        }
+
+        .recipe .rate:not(:checked) > label:before {
+          content: "★ ";
+        }
+
+        .recipe .rate > input:checked ~ label {
+          color: #ffc700;
+        }
+
+        .recipe .rate:not(:checked) > label:hover,
+        .recipe .rate:not(:checked) > label:hover ~ label {
+          color: #deb217;
+        }
+
+        .recipe .rate > input:checked + label:hover,
+        .recipe .rate > input:checked + label:hover ~ label,
+        .recipe .rate > input:checked ~ label:hover,
+        .recipe .rate > input:checked ~ label:hover ~ label,
+        .recipe .rate > label:hover ~ input:checked ~ label {
+          color: #c59b08;
+        }
+
+        .recipe .recipe-container p {
+          font-family: "Dancing Script", cursive;
+          font-size: 28px;
+        }
+
+        .recipe .recipe-container h3 {
+          font-family: "Playfair Display", sans-serif;
+          font-size: 48px;
+        }
+
+        .recipe .accordion-button {
+          font-size: 22px;
+        }
+
+        .recipe .borders {
+          border-top: 1px dotted #211c1c;
+          border-bottom: 1px dotted #211c1c;
+        }
+
+        .recipe .border-right {
+          border-right: 1px dotted #211c1c;
+          padding-right: 90px;
+        }
+
+        .recipe .border-left {
+          border-left: 1px dotted #211c1c;
+          padding-left: 90px;
+        }
+
+        .recommended {
+          margin-bottom: 100px;
+        }
+
+        .recommended a {
+          font-size: 22px;
+        }
+
+        .about-me {
+          margin-bottom: 70px;
+        }
+
+        .about-me p {
+          font-size: 26px;
+          text-align: justify;
+        }
+
+        .about-me .introduction {
+          padding: 40px 34px 34px;
+        }
+
+        .contact-me {
+          background-color: #e9ecef;
+        }
+
+        .contact-me span {
+          color: red;
+          font-weight: 600;
+        }
+
+        .contact-me .form-control {
+          font-size: 22px;
+        }
+
+        .contact-me button {
+          background-color: #fff;
+          font-size: 22px;
+          padding: 20px 24px;
+          border: 2px solid #9cacbb;
+          font-weight: 500;
+          color: #211c1c;
+          transition: all 0.3s ease-in;
+        }
+
+        .contact-me button:hover {
+          background-color: #9cacbb;
+          color: #fff;
+        }
+
+        .footer {
+          background: linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 1) 0%,
+            rgba(223, 201, 232, 1) 35%,
+            rgba(184, 225, 233, 1) 100%
+          );
+        }
+
+        .social-links a {
+          text-decoration: none;
+          color: #211c1c;
+          margin: 0 10px;
+          font-size: 30px;
+        }
+      }
+
       @media (max-width: 1440px) {
         body {
           font-size: 18px;
